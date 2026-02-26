@@ -1,225 +1,74 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>A.R. Venba 1st Birthday</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-
-/* ================= BODY ================= */
-
-body{
-margin:0;
-font-family:Segoe UI;
-text-align:center;
-color:white;
-overflow-x:hidden;
-}
-
-/* ================= PAGE SYSTEM ================= */
-
-.page{
-display:none;
-padding:30px;
-min-height:100vh;
-position:relative;
-}
-
-.active{
-display:block;
-}
-
-/* ================= PAGE 1 (BABY ANIMALS) ================= */
-
-#page1{
-background:linear-gradient(45deg,#ff9a9e,#fad0c4);
-overflow:hidden;
-}
-
-/* Floating animals */
-.animal{
-position:absolute;
-width:80px;
-animation:floatAnimal 14s linear infinite;
-opacity:0.9;
-}
-
-@keyframes floatAnimal{
-0%{transform:translateY(110vh);}
-100%{transform:translateY(-120vh);}
-}
-
-/* ================= PAGE 2 (FUNNY BIRTHDAY BG) ================= */
-
-#page2{
-background:linear-gradient(45deg,#ff4e50,#ff7b7b);
-overflow:hidden;
-}
-
-/* Funny birthday items */
-.funny{
-position:absolute;
-width:90px;
-animation:spinMove 18s linear infinite;
-opacity:0.25;
-}
-
-@keyframes spinMove{
-0%{transform:translateY(100vh) rotate(0deg);}
-100%{transform:translateY(-120vh) rotate(360deg);}
-}
-
-/* ================= CARD ================= */
-
-.container{
-background:white;
-color:black;
-padding:25px;
-border-radius:15px;
-width:320px;
-margin:auto;
-box-shadow:0 10px 25px rgba(0,0,0,0.3);
-position:relative;
-z-index:2;
-}
-
-input,select{
-padding:10px;
-width:80%;
-margin-top:10px;
-border-radius:8px;
-border:1px solid #ccc;
-}
-
-button{
-background:#ff2b2b;
-color:white;
-border:none;
-padding:12px 20px;
-margin-top:15px;
-border-radius:10px;
-cursor:pointer;
-font-size:16px;
-}
-
-/* ================= BABY IMAGE ================= */
-
-.baby{
-width:220px;
-border-radius:20px;
-box-shadow:0 0 20px gold;
-animation:float 3s infinite;
-position:relative;
-z-index:2;
-}
-
-@keyframes float{
-0%{transform:translateY(0)}
-50%{transform:translateY(-12px)}
-100%{transform:translateY(0)}
-}
-
-/* ================= INFO BOX ================= */
-
-.info{
-background:white;
-color:black;
-margin:20px auto;
-padding:20px;
-border-radius:15px;
-width:85%;
-max-width:400px;
-position:relative;
-z-index:2;
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- ================= PAGE 1 ================= -->
-
-<div id="page1" class="page active">
-
-<!-- Animated Baby Animals -->
-<img src="https://cdn-icons-png.flaticon.com/512/616/616408.png"
-class="animal" style="left:5%;animation-delay:0s;">
-
-<img src="https://cdn-icons-png.flaticon.com/512/616/616430.png"
-class="animal" style="left:25%;animation-delay:3s;">
-
-<img src="https://cdn-icons-png.flaticon.com/512/616/616554.png"
-class="animal" style="left:55%;animation-delay:6s;">
-
-<img src="https://cdn-icons-png.flaticon.com/512/616/616490.png"
-class="animal" style="left:80%;animation-delay:9s;">
-
-
-<h1>🎉 A.R. Venba's 1st Birthday 🎉</h1>
-<h3>Date : 27-02-2026</h3>
-
-<div class="container">
-
-<p><b>Select Gender</b></p>
-
-<select id="gender">
-<option>Male</option>
-<option>Female</option>
-</select>
-
-<br>
-
-<input type="text" id="name" placeholder="Enter Your Name">
-
-<br>
-
-<button onclick="goNext()">Enter</button>
-
-</div>
-</div>
-
-<!-- ================= PAGE 2 ================= -->
+<!-- ================= PAGE 2 (RSVP STYLE) ================= -->
 
 <div id="page2" class="page">
 
-<!-- Funny Birthday Background -->
-<img src="https://cdn-icons-png.flaticon.com/512/3468/3468379.png"
-class="funny" style="left:10%;animation-delay:0s;">
-
-<img src="https://cdn-icons-png.flaticon.com/512/3159/3159066.png"
-class="funny" style="left:40%;animation-delay:5s;">
-
-<img src="https://cdn-icons-png.flaticon.com/512/869/869636.png"
-class="funny" style="left:70%;animation-delay:9s;">
-
+<!-- HERO IMAGE -->
+<div class="hero">
 
 <h1 id="welcomeText"></h1>
+<p>We are excited to celebrate together 🎉</p>
 
-<!-- Replace with your baby image -->
-<img src="https://via.placeholder.com/300"
-class="baby">
+</div>
 
-<div class="info">
-<h2>🎈 Party Details</h2>
+<!-- EVENT DETAILS -->
+<div class="section">
 
-<p><b>Start Time:</b> 6:00 PM</p>
-<p><b>End Time:</b> 9:30 PM</p>
+<h2>🎈 Birthday Celebration</h2>
 
 <p>
-😄 Warning: Cake may disappear quickly! <br>
-Bring smiles, blessings & dancing energy!
+Join us to celebrate the joyful occasion of
+<b>A.R. Venba's 1st Birthday</b>.
+Your presence will make this day more special ❤️
+</p>
+
+<div class="details">
+
+<div class="card">
+<h3>📅 Date</h3>
+<p>27 February 2026</p>
+</div>
+
+<div class="card">
+<h3>🕒 Time</h3>
+<p>6:00 PM – 9:30 PM</p>
+</div>
+
+<div class="card">
+<h3>🎂 Dress Code</h3>
+<p>Colorful & Happy Vibes</p>
+</div>
+
+<div class="card">
+<h3>🎁 Note</h3>
+<p>Your blessings are the best gift</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- FUN MESSAGE -->
+<div class="section">
+
+<h2>😄 Special Message</h2>
+
+<p>
+Cake will be sweet 🍰  
+Music will be loud 🎵  
+Memories will be forever 💖
 </p>
 
 </div>
 
-<div class="info">
-<h2>📍 Location</h2>
+<!-- LOCATION -->
+<div class="section">
+
+<h2>📍 Venue Location</h2>
 
 <iframe
 width="100%"
-height="250"
-style="border:0"
+height="300"
+style="border-radius:12px;border:0"
 loading="lazy"
 allowfullscreen
 src="https://maps.google.com/maps?q=Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed">
@@ -228,32 +77,3 @@ src="https://maps.google.com/maps?q=Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed"
 </div>
 
 </div>
-
-<script>
-
-function goNext(){
-
-let name=document.getElementById("name").value;
-let gender=document.getElementById("gender").value;
-
-if(name==""){
-alert("Please enter name");
-return;
-}
-
-let title = gender=="Male" ? "Mr." : "Ms.";
-
-document.getElementById("welcomeText").innerHTML =
-"✨ Welcome "+title+" "+name+
-" ❤️<br>to A.R. Venba's Birthday Party";
-
-document.getElementById("page1").classList.remove("active");
-document.getElementById("page2").classList.add("active");
-
-window.scrollTo(0,0);
-}
-
-</script>
-
-</body>
-</html>
