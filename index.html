@@ -2,138 +2,81 @@
 <html>
 <head>
 <title>A.R. Venba 1st Birthday</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
-/* ---------- Background Animation ---------- */
-
 body{
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    text-align:center;
-    color:white;
-    overflow-x:hidden;
-
-    background: linear-gradient(-45deg,#ff4e50,#ff2b2b,#ff7b7b,#ffb199);
-    background-size:400% 400%;
-    animation:bgMove 10s ease infinite;
+margin:0;
+font-family:Segoe UI;
+text-align:center;
+background:linear-gradient(45deg,#ff4e50,#ff7b7b);
+color:white;
 }
 
-@keyframes bgMove{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
+/* Pages */
+.page{
+display:none;
+padding:30px;
 }
 
-/* ---------- Title Glow ---------- */
-
-h1{
-    margin-top:30px;
-    font-size:32px;
-    text-shadow:0 0 15px white;
-    animation:fadeIn 2s ease;
+.active{
+display:block;
 }
 
-h3{
-    margin-top:-10px;
-}
-
-/* ---------- Card ---------- */
-
+/* Card */
 .container{
-    background:white;
-    color:black;
-    padding:30px;
-    border-radius:20px;
-    width:320px;
-    margin:30px auto;
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
-    animation:zoomIn 1.2s ease;
+background:white;
+color:black;
+padding:25px;
+border-radius:15px;
+width:320px;
+margin:auto;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
-/* ---------- Inputs ---------- */
-
+/* Inputs */
 input,select{
-    padding:10px;
-    width:80%;
-    border-radius:8px;
-    border:1px solid #ccc;
-    margin-top:10px;
+padding:10px;
+width:80%;
+margin-top:10px;
+border-radius:8px;
+border:1px solid #ccc;
 }
 
-/* ---------- Button ---------- */
-
+/* Button */
 button{
-    background:#ff2b2b;
-    color:white;
-    border:none;
-    padding:12px 25px;
-    margin-top:15px;
-    font-size:16px;
-    border-radius:10px;
-    cursor:pointer;
-    transition:0.3s;
+background:#ff2b2b;
+color:white;
+border:none;
+padding:12px 20px;
+margin-top:15px;
+border-radius:10px;
+cursor:pointer;
 }
 
-button:hover{
-    background:#c40000;
-    transform:scale(1.05);
+/* Baby Image */
+.baby{
+width:200px;
+border-radius:20px;
+box-shadow:0 0 20px gold;
+animation:float 3s infinite;
 }
 
-/* ---------- Output Message ---------- */
-
-#output{
-    margin-top:20px;
-    font-size:18px;
-    font-weight:bold;
-    color:#ff2b2b;
-    animation:fadeIn 1s ease;
-}
-
-/* ---------- Baby Photo ---------- */
-
-.baby-photo{
-    width:160px;
-    height:160px;
-    border-radius:50%;
-    border:6px solid white;
-    box-shadow:0 0 20px gold;
-    animation:float 3s ease-in-out infinite;
-}
-
-/* Floating effect */
 @keyframes float{
-    0%{transform:translateY(0);}
-    50%{transform:translateY(-12px);}
-    100%{transform:translateY(0);}
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
 }
 
-/* ---------- Animations ---------- */
-
-@keyframes zoomIn{
-    from{transform:scale(0.7); opacity:0;}
-    to{transform:scale(1); opacity:1;}
-}
-
-@keyframes fadeIn{
-    from{opacity:0;}
-    to{opacity:1;}
-}
-
-/* ---------- Balloons ---------- */
-
-.balloon{
-    position:fixed;
-    bottom:-150px;
-    font-size:30px;
-    animation:balloonUp 10s linear infinite;
-}
-
-@keyframes balloonUp{
-    from{transform:translateY(0);}
-    to{transform:translateY(-110vh);}
+.info{
+background:white;
+color:black;
+margin:20px auto;
+padding:20px;
+border-radius:15px;
+width:85%;
+max-width:400px;
 }
 
 </style>
@@ -141,21 +84,16 @@ button:hover{
 
 <body>
 
-<!-- Floating Balloons -->
-<div class="balloon" style="left:10%;animation-delay:0s;">🎈</div>
-<div class="balloon" style="left:40%;animation-delay:3s;">🎈</div>
-<div class="balloon" style="left:70%;animation-delay:6s;">🎈</div>
+<!-- ================= PAGE 1 ================= -->
+
+<div id="page1" class="page active">
 
 <h1>🎉 A.R. Venba's 1st Birthday 🎉</h1>
 <h3>Date : 27-02-2026</h3>
 
-<!-- Baby Image (replace image URL) -->
-<img src="https://via.placeholder.com/160"
-class="baby-photo">
-
 <div class="container">
 
-<p><b>Select Gender</b></p>
+<p>Select Gender</p>
 
 <select id="gender">
 <option>Male</option>
@@ -168,30 +106,71 @@ class="baby-photo">
 
 <br>
 
-<button onclick="welcome()">Enter</button>
+<button onclick="goNext()">Enter</button>
 
-<p id="output"></p>
+</div>
+</div>
+
+<!-- ================= PAGE 2 ================= -->
+
+<div id="page2" class="page">
+
+<h1 id="welcomeText"></h1>
+
+<img src="https://via.placeholder.com/300"
+class="baby">
+
+<div class="info">
+<h2>🎈 Party Details</h2>
+
+<p><b>Start Time:</b> 6:00 PM</p>
+<p><b>End Time:</b> 9:30 PM</p>
+
+<p>
+😄 Warning: Cake may disappear quickly!  
+Bring smiles, blessings & dancing energy!
+</p>
+</div>
+
+<div class="info">
+<h2>📍 Location</h2>
+
+<!-- Google Map -->
+<iframe
+width="100%"
+height="250"
+style="border:0"
+loading="lazy"
+allowfullscreen
+src="https://maps.google.com/maps?q=Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</div>
 
 </div>
 
 <script>
 
-function welcome(){
+function goNext(){
 
 let name=document.getElementById("name").value;
 let gender=document.getElementById("gender").value;
 
 if(name==""){
- alert("Please enter name");
- return;
+alert("Please enter name");
+return;
 }
 
 let title = gender=="Male" ? "Mr." : "Ms.";
 
-document.getElementById("output").innerHTML =
-"✨ Welcome "+title+" <span style='color:gold'>"+name+
-"</span>! <br>Thank you for celebrating <br>💖 A.R. Venba's 1st Birthday 💖";
+document.getElementById("welcomeText").innerHTML =
+"✨ Welcome "+title+" "+name+
+" ❤️<br>to A.R. Venba's Birthday Party";
 
+document.getElementById("page1").classList.remove("active");
+document.getElementById("page2").classList.add("active");
+
+window.scrollTo(0,0);
 }
 
 </script>
