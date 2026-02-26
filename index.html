@@ -1,74 +1,240 @@
-<!-- ================= PAGE 2 (RSVP STYLE) ================= -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>A.R. Venba 1st Birthday</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+/* ================= BODY ================= */
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+text-align:center;
+overflow-x:hidden;
+}
+
+/* ================= PAGES ================= */
+
+.page{
+display:none;
+min-height:100vh;
+padding:30px;
+}
+
+.active{
+display:block;
+}
+
+/* ================= PAGE 1 BACKGROUND ================= */
+
+#page1{
+background:linear-gradient(45deg,#ff9a9e,#fad0c4);
+position:relative;
+overflow:hidden;
+color:white;
+}
+
+/* Animated baby animals */
+.animal{
+position:absolute;
+width:90px;
+animation:float 8s linear infinite;
+opacity:0.9;
+}
+
+@keyframes float{
+0%{transform:translateY(100vh) rotate(0deg);}
+100%{transform:translateY(-120vh) rotate(360deg);}
+}
+
+/* ================= CARD ================= */
+
+.container{
+background:white;
+color:black;
+padding:25px;
+border-radius:18px;
+width:320px;
+margin:auto;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Inputs */
+
+input,select{
+padding:12px;
+width:85%;
+margin-top:10px;
+border-radius:10px;
+border:1px solid #ccc;
+}
+
+/* Button */
+
+button{
+background:#ff3b3b;
+color:white;
+border:none;
+padding:12px 22px;
+margin-top:15px;
+border-radius:10px;
+cursor:pointer;
+font-size:16px;
+}
+
+/* ================= PAGE 2 DESIGN ================= */
+
+#page2{
+background:linear-gradient(135deg,#ffecd2,#fcb69f);
+color:#333;
+position:relative;
+overflow:hidden;
+}
+
+/* Confetti animation */
+
+.confetti{
+position:absolute;
+width:15px;
+height:15px;
+background:red;
+top:-20px;
+animation:fall 6s linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(-10vh) rotate(0deg);}
+100%{transform:translateY(110vh) rotate(360deg);}
+}
+
+/* Hero Banner */
+
+.hero{
+background:white;
+padding:25px;
+border-radius:20px;
+max-width:450px;
+margin:auto;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.hero img{
+width:220px;
+border-radius:20px;
+animation:bounce 3s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+}
+
+/* Info cards */
+
+.info{
+background:white;
+margin:20px auto;
+padding:20px;
+border-radius:18px;
+max-width:450px;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+iframe{
+border-radius:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= PAGE 1 ================= -->
+
+<div id="page1" class="page active">
+
+<h1>🎉 A.R. Venba's 1st Birthday 🎉</h1>
+<h3>Date : 27-02-2026</h3>
+
+<div class="container">
+
+<p>Select Gender</p>
+
+<select id="gender">
+<option>Male</option>
+<option>Female</option>
+</select>
+
+<br>
+
+<input type="text" id="name" placeholder="Enter Your Name">
+
+<br>
+
+<button onclick="goNext()">Enter</button>
+
+</div>
+
+<!-- Animated Baby Animals -->
+<img class="animal" style="left:5%;animation-delay:0s"
+src="https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif">
+
+<img class="animal" style="left:40%;animation-delay:3s"
+src="https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif">
+
+<img class="animal" style="left:75%;animation-delay:6s"
+src="https://media.giphy.com/media/13borq7Zo2kulO/giphy.gif">
+
+</div>
+
+<!-- ================= PAGE 2 ================= -->
 
 <div id="page2" class="page">
 
-<!-- HERO IMAGE -->
+<!-- Confetti -->
+<div class="confetti" style="left:10%;animation-delay:0s"></div>
+<div class="confetti" style="left:30%;animation-delay:2s;background:blue"></div>
+<div class="confetti" style="left:60%;animation-delay:4s;background:green"></div>
+<div class="confetti" style="left:80%;animation-delay:1s;background:orange"></div>
+
 <div class="hero">
 
 <h1 id="welcomeText"></h1>
-<p>We are excited to celebrate together 🎉</p>
 
-</div>
+<img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif">
 
-<!-- EVENT DETAILS -->
-<div class="section">
-
-<h2>🎈 Birthday Celebration</h2>
+<h2>🎂 You're Invited!</h2>
 
 <p>
-Join us to celebrate the joyful occasion of
-<b>A.R. Venba's 1st Birthday</b>.
-Your presence will make this day more special ❤️
-</p>
-
-<div class="details">
-
-<div class="card">
-<h3>📅 Date</h3>
-<p>27 February 2026</p>
-</div>
-
-<div class="card">
-<h3>🕒 Time</h3>
-<p>6:00 PM – 9:30 PM</p>
-</div>
-
-<div class="card">
-<h3>🎂 Dress Code</h3>
-<p>Colorful & Happy Vibes</p>
-</div>
-
-<div class="card">
-<h3>🎁 Note</h3>
-<p>Your blessings are the best gift</p>
-</div>
-
-</div>
-
-</div>
-
-<!-- FUN MESSAGE -->
-<div class="section">
-
-<h2>😄 Special Message</h2>
-
-<p>
-Cake will be sweet 🍰  
-Music will be loud 🎵  
-Memories will be forever 💖
+Join us to celebrate joyful moments,
+cake cutting & lots of fun!
 </p>
 
 </div>
 
-<!-- LOCATION -->
-<div class="section">
+<div class="info">
 
-<h2>📍 Venue Location</h2>
+<h2>🎈 Party Details</h2>
+
+<p><b>Start Time:</b> 6:00 PM</p>
+<p><b>End Time:</b> 9:30 PM</p>
+
+<p>
+😄 Cake may disappear quickly!  
+Bring smiles, blessings & dancing energy!
+</p>
+
+</div>
+
+<div class="info">
+
+<h2>📍 Location</h2>
 
 <iframe
 width="100%"
-height="300"
-style="border-radius:12px;border:0"
+height="250"
 loading="lazy"
 allowfullscreen
 src="https://maps.google.com/maps?q=Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed">
@@ -77,3 +243,32 @@ src="https://maps.google.com/maps?q=Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed"
 </div>
 
 </div>
+
+<script>
+
+function goNext(){
+
+let name=document.getElementById("name").value;
+let gender=document.getElementById("gender").value;
+
+if(name==""){
+alert("Please enter name");
+return;
+}
+
+let title = gender=="Male" ? "Mr." : "Ms.";
+
+document.getElementById("welcomeText").innerHTML =
+"✨ Welcome "+title+" "+name+
+"<br>❤️ to A.R. Venba's Birthday Party";
+
+document.getElementById("page1").classList.remove("active");
+document.getElementById("page2").classList.add("active");
+
+window.scrollTo(0,0);
+}
+
+</script>
+
+</body>
+</html>
