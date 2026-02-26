@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>A.R. Venba 1st Birthday</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#ff2b2b;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.container{
+    background:white;
+    color:black;
+    padding:30px;
+    border-radius:15px;
+    width:350px;
+    margin:auto;
+}
+
+button{
+    background:#d40000;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    margin-top:15px;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎉 A.R. Venba's 1st Birthday 🎉</h1>
+<h3>Date : 27-02-2026</h3>
+
+<div class="container">
+
+<p>Select Gender</p>
+
+<select id="gender">
+<option>Male</option>
+<option>Female</option>
+</select>
+
+<br><br>
+
+<input type="text" id="name" placeholder="Enter Your Name">
+
+<br>
+
+<button onclick="welcome()">Enter</button>
+
+<p id="output"></p>
+
+</div>
+
+<script>
+function welcome(){
+
+let name=document.getElementById("name").value;
+let gender=document.getElementById("gender").value;
+
+if(name==""){
+ alert("Please enter name");
+ return;
+}
+
+let message="";
+
+if(gender=="Male"){
+ message="Welcome Mr. "+name+
+ "! Thank you for celebrating A.R. Venba's 1st Birthday with us ❤️";
+}else{
+ message="Welcome Ms. "+name+
+ "! Thank you for celebrating A.R. Venba's 1st Birthday with us ❤️";
+}
+
+document.getElementById("output").innerHTML=message;
+
+}
+</script>
+
+</body>
+</html>
